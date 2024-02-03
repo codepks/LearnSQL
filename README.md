@@ -11,6 +11,8 @@
 
 ```
 SELECT        - To display rows of one of more tables
+
+e.g. SELECT columns FROM table WHERE comparisons
 ```
 
 > Maintainance
@@ -19,6 +21,8 @@ SELECT        - To display rows of one of more tables
 INSERT        - Add rows to table
 UPDATE        - Change rows in table
 DELETE        - Remmove rows from a table
+
+DELETE FROM table WHERE comaprisons
 ```
 
 > Definition
@@ -26,5 +30,7 @@ DELETE        - Remmove rows from a table
 ```
 CREATE        - Add tables, indices, views
 DROP          - Remove tables, indices, views
+
+e.g. CREATE INDEX index ON table (columns)
 ```
 
