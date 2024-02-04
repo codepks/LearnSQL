@@ -4,6 +4,8 @@
 2. Column names are unique in a particular table
 3. Rows don't have names nor their position is fixed
 
+source : https://www.geeksforgeeks.org/30-days-of-sql-from-basic-to-advanced-level/
+
 
 # Statements
 **There are basic statements**
@@ -133,7 +135,7 @@ If we want to sort a table based on elements of one column:
 SELECT * FROM File ORDER BY CreatedDateTime DESC
 ```
 
-# DELETE 
+# 4. DELETE Data
 
 Used for deleting records
 
@@ -147,4 +149,71 @@ DELETE FROM Customer WHERE CustomerName='Shubham'
 ```
 DELETE * FROM GFG_EMPLOyees;
 ```
+
+# 5. Operators
+They act like further filtering
+
+## AND operator
+
+*SELECT * FROM table_name WHERE condition1 AND condition2 and …conditionN;*
+
+## OR operator
+
+*SELECT * FROM table_name WHERE condition1 OR condition2 OR …conditionN;*
+
+
+> COMBINATION
+
+SELECT * FROM table_name WHERE condition1 AND (condition2 OR condition3);
+
+
+# NOT Operator
+
+```
+SELECT * FROM Customer WHERE Country <> 'Australia' 
+```
+
+# 6. Update Rows
+Generally used with WHERE clause
+SET Clause sets the value
+
+## Single Entry Update
+```
+UPDATE Customer
+SET CustomerName  = 'Nitin'
+WHERE Age = 22;
+```
+
+## Multiple Column Update
+
+```
+UPDATE Customer SET CustomerName = 'Satyam', 
+Country = 'USA' WHERE CustomerID = 1;
+```
+
+# 7. LIKE Clause
+Used for partial matching of characters
+
+Syntax
+```
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+```
+
+> Partial Matching 
+```
+‘a%’	Match strings that start with ‘a’
+‘%a’	Match strings with end with ‘a’
+‘a%t’	Match strings that contain the start with ‘a’ and end with ‘t’.
+```
+> Example
+
+```
+SELECT SupplierID, Name, Address
+FROM Suppliers
+WHERE Name LIKE 'Ca%';
+```
+
+
 
