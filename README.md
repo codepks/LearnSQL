@@ -78,3 +78,58 @@ Values (Value01, value02, value03),
 (ValueN1, valueN2, valueN3)
 ```
 
+> Example
+
+```
+INSERT INTO Customer (CustomerID, CustomerName, LastName, Country, Age, Phone)
+VALUES (1, 'Shubham', 'Thakur', 'India','23','xxxxxxxxxx')
+```
+
+# 3. Select Data
+
+## No Condition
+
+```
+SELECT column1,column2 FROM table_name 
+```
+
+> Example
+
+```
+SELECT CustomerName, LastName FROM Customer;
+```
+
+## Where Clause
+Used for setting filters
+
+```
+SELECT CustomerName FROM Customer where Age = '21';
+```
+
+## GROUP BY
+For grouping the data
+
+```
+SELECT * FROM Customer GROUP BY Country
+```
+
+## HAVING
+Works on aggregate statements like MIN, MAX, SUM, COUNT, AVG
+
+```
+SELECT Department, sum(Salary) as Salary
+FROM employee
+GROUP BY department
+HAVING SUM(Salary) >= 50000;
+```
+
+The above statement will group all the Salary column types and add them and then sum up those groups.
+The condition is to satisfy the summation of group wise element addition.
+
+## ORDER BY
+If we want to sort a table based on elements of one column:
+
+```
+SELECT * FROM File ORDER BY CreatedDateTime DESC
+```
+
