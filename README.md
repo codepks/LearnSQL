@@ -133,3 +133,18 @@ If we want to sort a table based on elements of one column:
 SELECT * FROM File ORDER BY CreatedDateTime DESC
 ```
 
+# DELETE 
+
+Used for deleting records
+
+## Deleting single record
+```
+DELETE FROM Customer WHERE CustomerName='Shubham'
+```
+
+## Deleting Multiple Records
+
+```
+DELETE * FROM GFG_EMPLOyees;
+```
+
